@@ -15,15 +15,15 @@ The web scraper goes to wowhead.com weapon page. There is about 10,000 weapons w
 At the start I was collecting the data directly from the elements shown on the page. Issues come up when a weapon has a different amount of attributes. For example, if a weapon has two attributes such as strength and agility, that takes up 3 spaces on the DOM. Then if the next weapon has only one, the script would return an error. After exploring the DOM I was able to find all of the data in a <noscript> tag. All of the attributes have different code tags. Sorting out all of the tags I was able to use string manipulation to return the information desired.
 
 #### Example of table view of weapons
-![alt](https://github.com/KoderKow/wow_scraper/blob/master/readme_images/table_view.png){:height="50%" width="50%"}
+<img src="https://github.com/KoderKow/wow_scraper/blob/master/readme_images/table_view.png" width="70%" height="70%">
 
 #### Example of weapon view for all attributes
-![alt](https://github.com/KoderKow/wow_scraper/blob/master/readme_images/item_view.png)
+<img src="https://github.com/KoderKow/wow_scraper/blob/master/readme_images/item_view.png" width="70%" height="70%">
   
 First time running the script all the way through with no error showed the next hurdle. The original default weapon data only showed about 1,000 of the 10,000 total weapons. The next step was to automate a filtering process to collect all the weapons.
 
 #### By default, the page displays around 1000 max
-![alt](https://github.com/KoderKow/wow_scraper/blob/master/readme_images/item_displayed_vs_total.png)
+<img src="https://github.com/KoderKow/wow_scraper/blob/master/readme_images/item_displayed_vs_total.png" width="50%" height="50%">
 
 I decided to search for weapons based on their item level. For example, levels 1-25, 26-35, etc. This would return all the weapons in chunks. Once the first chunk of weapons was collected the script clears the filter and inputs the next number range.
 
