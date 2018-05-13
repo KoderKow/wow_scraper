@@ -15,7 +15,7 @@ The web scraper goes to wowhead.com weapon page. There is about 10,000 weapons w
 At the start I was collecting the data directly from the elements shown on the page. Issues come up when a weapon has a different amount of attributes. For example, if a weapon has two attributes such as strength and agility, that takes up 3 spaces on the DOM. Then if the next weapon has only one, the script would return an error. After exploring the DOM I was able to find all of the data in a <noscript> tag. All of the attributes have different code tags. Sorting out all of the tags I was able to use string manipulation to return the information desired.
 
 #### Example of table view of weapons
-![alt](https://github.com/KoderKow/wow_scraper/blob/master/readme_images/table_view.png)
+![alt](https://github.com/KoderKow/wow_scraper/blob/master/readme_images/table_view.png){:height="50%" width="50%"}
 
 #### Example of weapon view for all attributes
 ![alt](https://github.com/KoderKow/wow_scraper/blob/master/readme_images/item_view.png)
